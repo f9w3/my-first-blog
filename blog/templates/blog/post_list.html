@@ -11,13 +11,11 @@
 </div>
 
 <div>
-<p>published: 10.14.2016, 3:25 pm</p>
-<h2><a href="">First Post</a></h2>
-<p>
-Content of post Content of post Content of post<br>
-Content of post Content of post<br>
-Content of post
-</p>
+{% for post in posts %}
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+{% endfor %}
 </div>
 
 
